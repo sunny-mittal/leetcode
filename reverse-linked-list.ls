@@ -1,3 +1,5 @@
+/*Reverse a singly linked list.*/
+
 class ListNode
   (@val) ->
 
