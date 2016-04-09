@@ -17,6 +17,13 @@ to-string = (head) ->
     head = head.next
   res.slice 0 -1
 
-delete-node = (node) ->
-  node.val = node.next.val
-  node.next = node.next.next
+reverse-list = (head) ->
+  return head if not (head instanceof ListNode)
+  next = head.next
+  head.next = void
+  while next
+    next-next = next.next
+    next.next = head
+    head = next
+    next = next-next
+  head
